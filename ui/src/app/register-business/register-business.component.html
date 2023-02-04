@@ -1,1 +1,11 @@
 <p>registering business</p>
+
+<form [formGroup]="businessForm" (ngSubmit)="onSubmit()">
+  <label for="businessName">business name: </label>
+  <input id="businessName" type="text" formControlName="businessName">
+
+  <button type="submit" [disabled]="!businessForm.valid">Submit</button>
+
+</form>
+
+<p>{{ businessForm.value }}</p>
