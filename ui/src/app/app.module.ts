@@ -8,6 +8,8 @@ import { RegisterBusinessComponent } from './register-business/register-business
 import { HomeComponent } from './home/home.component';
 import {ReactiveFormsModule} from "@angular/forms";
 
+import {HttpClientModule} from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +18,7 @@ import {ReactiveFormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule

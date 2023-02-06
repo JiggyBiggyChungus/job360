@@ -1,11 +1,38 @@
-<p>registering business</p>
+<h1>registering business</h1>
 
 <form [formGroup]="businessForm" (ngSubmit)="onSubmit()">
+
   <label for="businessName">business name: </label>
-  <input id="businessName" type="text" formControlName="businessName">
+  <input id="businessName" type="text" formControlName="businessName"> <br>
+
+  <label for="shortDescription">short description of business activity: </label>
+  <input id="shortDescription" type="text" formControlName="shortDescription"> <br>
+
+  <div formGroupName="hqAdress">
+    <br> <label for="street">street: </label>
+    <input id="street" type="text" formControlName="street"> <br>
+
+    <label for="city">city: </label>
+    <input id="city" type="text" formControlName="city"> <br>
+
+    <label for="canton">canton: </label>
+    <input id="canton" type="text" formControlName="canton"> <br>
+
+    <label for="plz">plz: </label>
+    <input id="plz" type="text" formControlName="plz">
+  </div>
+  <br>
+
+  <div formGroupName="credentials">
+    <label for="email">email: </label>
+    <input id="email" type="email" formControlName="email"> <br>
+
+    <label for="password">password: </label>
+    <input id="password" type="password" formControlName="password">
+  </div> <br>
 
   <button type="submit" [disabled]="!businessForm.valid">Submit</button>
+</form> <br>
 
-</form>
-
-<p>{{ businessForm.value }}</p>
+<p>{{ businessForm.status }}</p>
+<p>{{ businessForm.value | json }}</p>
