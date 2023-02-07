@@ -34,4 +34,5 @@ async def root():
 
 @app.post("/new-business/")
 async def new_business(business: dataModels.business.Business):
+    print(business)
     return business
