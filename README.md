@@ -1,5 +1,11 @@
 Job360 / Elias
 
+# Commit format
+"#feature number | what I did", "| nr:" is sometimes added to describe non-related things that I did.
+
+# Branch format
+Branch name is just feature number
+
 # Setting it up
 ## Running the frontend
 cd ui
