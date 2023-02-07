@@ -8,13 +8,15 @@ Branch name is just feature number
 
 # Setting it up
 ## Running the frontend
-cd ui
-ng serve
+1. cd ui
+2. ng serve
 
 ## Run the api-gateway (the microservice "register-service is in devlopment and not ready")
-pip install "fastapi[all]"
-Windows PS: venv\Scripts\Activate.ps1 | Linux, Mac Bash: source venv/bin/activate
-uvicorn main:app --reload
+1. open a new terminal
+2. cd api-gateway
+3. pip install "fastapi[all]"
+4. Windows PS: venv\Scripts\Activate.ps1 | Linux, Mac Bash: source venv/bin/activate
+5. uvicorn main:app --reload
 
 # Test it yourself
 1. Go to http://localhost:4200/register-business and fill out the form. Every field is required. Notice the validity status and the business object below the form updating in real time.
